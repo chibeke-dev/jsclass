@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        option = Number(
+  prompt("Welcome to C-Tech Services\n1. Airtime-self \n2. Airtime-others \n3. Data \n4. Transfer")
+);
+
+// Airtime-self
+if(option == 1)
+{ 
+    network = prompt("Select your preferred network\n1. MTN \n2. GLO \n3. 9Mobile \n4. Airtel");
+    phone = prompt("Enter your phone number");
+    amount = prompt("Select amount\n1. 750 \n2. 500 \n3. 400 \n4. 200 \n5. 100");
+
+    if(amount < 100 || amount > 750 ){
+       alert("invalid amount");
+  }
+
+  }
+    
+  
+// Airtime for others
+else if (option ==2){
+    network  = prompt("Select your preferred network\n1. MTN \n2. GLO \n3. 9Mobile \n4. Airtel");
+    phone = prompt("Enter your phone number");
+    amount = prompt("Select amount\n1. 750 \n2. 500 \n3. 400 \n4. 200 \n5. 100");
+
+  if(amount < 100 || amount > 750){
+    alert("invalid number");
+  }
+}
+
+
+// Data
+else if(option ==3){
+    data = prompt("Select your option\n1. Transfer from balance \n2. Buy for a friend \n3. Request from a Friend\n4. Borrow data")
+  //  For option one
+       if (data == 1) {
+          network = prompt( "Select preferred network \n1. MTN\n2. GLO\n3. Airtel\n4. Etisalat");
+          number = prompt("Enter Recipient's number ");
+          amount = prompt("Select amount\n1. 750MB \n2. 500MB \n3. 400MB \n4. 200MB \n5. 100MB \n6. 50MB ");
+          answer = confirm("Do yo want to continue this transaction")
+          if(answer){
+          alert("Successful");
+          }
+  } else {
+     alert( "Unsuccessful");
+  }
+
+}
+
+// Transfer
+else if(option ==4)
+{
+    transfer = prompt("Enter Amount");
+    account = prompt("Enter Account number");
+    type = prompt("Select Account type\n1. Current \n2. Savings \n3. Others");
+    bank = prompt("Select Bank\n1.First Bank \n2. Ecobank \n3. FCMB \n4. Union Bank \n5.Other Banks");
+    pin = prompt("Enter pin to confirm");
+    answer = confirm("Are you sure you want to transfer");
+      if (answer) {
+        alert(" You have successfully transferred funds");
+     }
+
+     else {
+      alert("Invalid Transaction");
+    }
+   
+}   
+else{
+    alert("invalid option");
+}
+
+
+
+    </script>
+</body>
+</html>
